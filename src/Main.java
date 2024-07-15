@@ -31,15 +31,18 @@ public class Main {
 
         Dev vitor = new Dev("Vitor");
         vitor.inscreverBootcamp(bootcamp);
-        System.out.println("Conteudos inscritos Vitor: " + vitor.getConteudosInscritos());
-        vitor.progredir();
         System.out.println("Conteudos finalizados Vitor: " + vitor.getConteudosConcluidos());
         System.out.println("Conteudos inscritos Vitor: " + vitor.getConteudosInscritos());
-        System.out.println("= = = = = = =");
-        Dev claudio = new Dev("Claudio");
-        claudio.inscreverBootcamp(bootcamp);
-        System.out.println("Conteudos inscritos Claudio: " + claudio.getConteudosInscritos());
-        claudio.progredir();
-        System.out.println("Conteudos finalizados Claudio: " + claudio.getConteudosConcluidos());
+        System.out.println("XP Vitor: " + vitor.calcularTotalXp());
+        vitor.progredir();
+        System.out.println("= = = PROGREDINDO = = =");
+        System.out.println("Conteudos finalizados Vitor: " + vitor.getConteudosConcluidos());
+        System.out.println("Conteudos inscritos Vitor: " + vitor.getConteudosInscritos());
+        System.out.println("XP Vitor: " + vitor.calcularTotalXp());
+        vitor.progredir();
+        System.out.println("= = = PROGREDINDO = = =");
+        System.out.println("Conteudos finalizados Vitor: " + vitor.getConteudosConcluidos());
+        System.out.println("Conteudos inscritos Vitor: " + vitor.getConteudosInscritos());
+        System.out.println("XP Vitor: " + vitor.calcularTotalXp());
     }
 }
