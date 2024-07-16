@@ -7,9 +7,9 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
+
         Curso curso = new Curso();
         Mentoria mentoria = new Mentoria();
-
 
         curso.setTitulo("Curso Java");
         curso.setDescricao("Descrição curso Java.");
@@ -20,9 +20,6 @@ public class Main {
         mentoria.setDescricao("Descrição mentoria Java");
         mentoria.setData(LocalDate.now());
 
-       /* System.out.println(curso);
-        System.out.println(mentoria); */
-
         Bootcamp bootcamp = new Bootcamp();
         bootcamp.setTitulo("Bootcamp Java Developer");
         bootcamp.setDescricao("Descrição Bootcamp Java");
@@ -31,18 +28,9 @@ public class Main {
 
         Dev vitor = new Dev("Vitor");
         vitor.inscreverBootcamp(bootcamp);
-        System.out.println("Conteudos finalizados Vitor: " + vitor.getConteudosConcluidos());
-        System.out.println("Conteudos inscritos Vitor: " + vitor.getConteudosInscritos());
-        System.out.println("XP Vitor: " + vitor.calcularTotalXp());
+        vitor.statusAtual();
         vitor.progredir();
-        System.out.println("= = = PROGREDINDO = = =");
-        System.out.println("Conteudos finalizados Vitor: " + vitor.getConteudosConcluidos());
-        System.out.println("Conteudos inscritos Vitor: " + vitor.getConteudosInscritos());
-        System.out.println("XP Vitor: " + vitor.calcularTotalXp());
         vitor.progredir();
-        System.out.println("= = = PROGREDINDO = = =");
-        System.out.println("Conteudos finalizados Vitor: " + vitor.getConteudosConcluidos());
-        System.out.println("Conteudos inscritos Vitor: " + vitor.getConteudosInscritos());
-        System.out.println("XP Vitor: " + vitor.calcularTotalXp());
+
     }
 }

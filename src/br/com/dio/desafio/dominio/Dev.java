@@ -19,14 +19,26 @@ public class Dev {
         bootcamp.getDevsInscritos().add(this);
     }
 
+    public void statusAtual() {
+        System.out.println("= = = STATUS ATUAL = = =");
+        System.out.println("Conteudos finalizados " + this.nome + " : " + this.getConteudosConcluidos());
+        System.out.println("Conteudos inscritos " + this.nome + " : " + this.getConteudosInscritos());
+        System.out.println("XP: " + this.calcularTotalXp());
+    }
+
     public void progredir() {
         Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst();
         if (conteudo.isPresent()) {
             this.conteudosConcluidos.add(conteudo.get());
             this.conteudosInscritos.remove((conteudo.get()));
+            System.out.println(this.nome + " progrediu no Bootcamp!");
+            System.out.println("= = = STATUS ATUAL = = =");
+            System.out.println("Conteudos finalizados" + this.nome + " : " + this.getConteudosConcluidos());
+            System.out.println("Conteudos inscritos " + this.nome + " : " + this.getConteudosInscritos());
+            System.out.println("XP: " + this.calcularTotalXp());
         }
         else {
-            System.err.println("Você não está matriculado em nenhum conteudo.");
+            System.err.println(this.nome + " não está matriculado em nenhum conteudo.");
         }
     }
 
